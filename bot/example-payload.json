@@ -1,0 +1,39 @@
+{
+  "_comment": "Payload SINTETIS untuk menguji kontrak webhook n8n. Semua nomor WO/IDO/SN/NIK/nama adalah fiktif. Tidak ada data pelanggan, mitra, atau karyawan di repo ini.",
+  "kind": "nte",
+  "message": {
+    "message_id": 1001,
+    "date": 1767225600,
+    "from": {
+      "id": 100000001,
+      "is_bot": false,
+      "first_name": "Teknisi",
+      "username": "teknisi_contoh"
+    },
+    "chat": {
+      "id": -1001234567890,
+      "title": "GUDANG - CONTOH (sintetis)",
+      "type": "supergroup"
+    },
+    "text": "TANGGAL MASUK 2026-01-05 NO IDO IDO-0001 TIPE BARANG STB SN ID SNID-0001 MAC AA:BB:CC:DD:EE:01 SN - STBID STB-0001 NO DUS DUS-01 NAMA TEKNISI TEKNISI CONTOH DIVISI PARTNER SC/IN IN INET 20M TDIS 0"
+  },
+  "expected": {
+    "rows": 1,
+    "columns": [
+      "TANGGAL MASUK",
+      "NO IDO",
+      "TIPE BARANG",
+      "SN ID",
+      "MAC",
+      "SN - STBID",
+      "NO DUS",
+      "NAMA TEKNISI",
+      "DIVISI",
+      "SC/IN",
+      "INET",
+      "TDIS"
+    ],
+    "jalur": "L0",
+    "catatan": "Semua alias dikenali -> parser deterministik dipakai, tanpa panggilan LLM."
+  }
+}

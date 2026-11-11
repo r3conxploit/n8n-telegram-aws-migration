@@ -1,0 +1,18 @@
+# Normalisasi line ending: repo disimpan LF (wajib untuk skrip bash)
+* text=auto eol=lf
+
+# Skrip shell & Dockerfile HARUS LF — CRLF membuat "bad interpreter" di Linux
+*.sh   text eol=lf
+*.bash text eol=lf
+Dockerfile text eol=lf
+
+# File Windows-sentris (kalau nanti ada) tetap CRLF
+*.bat  text eol=crlf
+*.cmd  text eol=crlf
+*.ps1  text eol=crlf
+
+# Biner
+*.tar.gz binary
+*.sqlite binary
+*.png binary
+*.jpg binary
