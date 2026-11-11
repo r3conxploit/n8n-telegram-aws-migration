@@ -18,6 +18,21 @@ benar-benar dijalankan.
 
 ---
 
+## Abstract (EN)
+
+Migrated a **self-hosted n8n instance + two Telegram bots** off a Windows laptop onto
+**AWS EC2 `t3.micro` (ap-southeast-2)**: Docker-pinned runtime, SQLite state restored into a
+named volume, and ingress provided by a **Cloudflare Tunnel** so the box exposes **zero
+application ports** — no ALB, no inbound 443, no TLS certs on the instance. Work includes
+the migration runbook, 8 architecture decision records, idempotent bash automation,
+a security/secrets inventory, and a troubleshooting catalogue built from the five real
+failed attempts it took to get there. State that moved: 20 workflows, 7 credentials,
+104 executions, 24 MB archive. Cost: ~$13/mo.
+
+Everything below is in Indonesian; `docs/` mirrors the same structure.
+
+---
+
 ## 1. Ringkasan hasil
 
 | Item | Sebelum (local) | Sesudah (AWS) |
